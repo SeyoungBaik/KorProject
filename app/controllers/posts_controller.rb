@@ -63,6 +63,7 @@ end
   def destroy
     authorize_action_for @post
     
+    
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }

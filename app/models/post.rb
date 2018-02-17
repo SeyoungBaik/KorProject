@@ -1,7 +1,6 @@
 class Post < ActiveRecord::Base
-  
   resourcify
-   include Authority::Abilities
-   
+  include Authority::Abilities
+
   belongs_to :user
 end

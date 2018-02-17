@@ -30,9 +30,11 @@
 
 <%= link_to 'New Post', new_post_path, class: "btn btn-default" %>
 
-<%= link_to icon('eye-open'), post %>&nbsp;
+
+
 <% if user_signed_in? %>
-  <%= link_to icon('edit'), edit_post_path(post) if post.updatable_by? current_user %>&nbsp;
-  <%= link_to icon('trash'), post, method: :delete, data: { confirm: 'Are you sure?' } if post.deletable_by? current_user %>
+  <%= link_to icon('edit'), edit_post_path(@posts) if @posts.updatable_by? current_user %>&nbsp;
+  <%= link_to icon('trash'), @posts, method: :delete, data: { confirm: 'Are you sure?' } if @posts.deletable_by? current_user %>
 <% end %>
+
 
