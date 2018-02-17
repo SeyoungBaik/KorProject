@@ -12,12 +12,25 @@
   <title>Workspace</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  
   <%= csrf_meta_tags %>
 </head>
 
 
 
 <body>
+  
+  
+  
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="/posts">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
  
   
     <!-- Fixed navbar -->
@@ -35,7 +48,7 @@
        <div class="navbar-collapse collapse">
   <ul class="nav navbar-nav">
     <li class="active"><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Posts", "#" %></li>
+    <li><%= link_to "Posts", "/posts" %></li>
   </ul>
   <ul class="nav navbar-nav navbar-right">
     <% if user_signed_in? %>

@@ -33,8 +33,10 @@
 
 
 <% if user_signed_in? %>
+
+
   <%= link_to icon('edit'), edit_post_path(@posts) if @posts.updatable_by? current_user %>&nbsp;
   <%= link_to icon('trash'), @posts, method: :delete, data: { confirm: 'Are you sure?' } if @posts.deletable_by? current_user %>
-<% end %>
+  <% end %>
 
 

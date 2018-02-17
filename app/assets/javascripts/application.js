@@ -18,3 +18,11 @@
 // Loads all Bootstrap javascripts
 //= require bootstrap
 
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
